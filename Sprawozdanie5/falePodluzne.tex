@@ -1,0 +1,418 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amssymb}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{pgfplots}
+
+\usepackage[intlimits]{amsmath}
+\marginsize{3cm}{3cm}{1.5cm}{1.5cm}
+\sloppy
+
+\begin{document}
+\begin{table}[ht]
+\centering
+\hspace*{-1cm}
+\begin{tabular}{lllllll}
+\cline{1-6}
+\multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}EAIiIB\\ Informatyka\end{tabular}}              & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Aleksander Lisiecki\\ Natalia Materek\end{tabular}}                                                                                                & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Rok\\ II\end{tabular}}          & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Grupa\\ 2\end{tabular}}            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Zespół\\ 6\end{tabular}}      &  \\ \cline{1-6}
+\multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Pracownia\\ FIZYCZNA\\ WFiIS AGH\end{tabular}} & \multicolumn{4}{l|}{\begin{tabular}[c]{@{}l@{}}Temat:\\ \textbf{\textit{Fale podłużne w ciałach stałych}} \end{tabular}}                                                                                                                                                                                                                                            & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Nr ćwiczenia:\\ 29\end{tabular}} &  \\ \cline{1-6}
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}c@{}}Data wykonania:\\ 04.01.2017\end{tabular}}      & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Data oddania:\\ 11.01.2017\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Zwrot do poprawki:\\ \phantom{data poprawki}\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data oddania:\\  \phantom{data oddania}\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data zaliczenia:\\  \phantom{data zaliczenia}\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}OCENA:\\ \phantom{ocena}\end{tabular}}       &  \\ \cline{1-6}
+                                                                                               &                                                                                         &                                                                                     &                                                                                &                                                                                   &                                                                               & 
+\end{tabular}
+\end{table}
+
+\begin{center}
+\begin{LARGE}
+\textbf{Ćwiczenie nr 29: Fale podłużne w ciałach stałych}
+\end{LARGE}
+\end{center}
+
+\section{Cel ćwiczenia}
+\indent Wyznaczenie modułu Younga dla różnych materiałów na podstawie pomiaru prędkości rozchodzenia się fali
+dźwiękowej w pręcie.
+
+\section{Wstęp teoretyczny} 
+ \indent Fala podłużna  to fala, w której drgania odbywają się w kierunku zgodnym z kierunkiem jej rozchodzenia się. 
+ Opisuje ją równanie:
+\begin{equation}
+ y= Acos(\omega t \pm kx) 
+\end{equation}  
+ gdzie 
+ \begin{description}
+ \item[$A$] amplituda drgań [$m$]
+ \item [$\omega$] prędkość kątowa $\left[\frac{1}{s}\right]$
+ \item [$t$] czas [$s$]
+ \item [$k$] współczynnik sprężystości [jednostka]
+ \end{description}
+ 
+\subsection{Prawa Hooke'a}
+Prawo: odkształcenie jest wprost proporcjonalne do wywołującej je siły.
+\begin{equation}
+  \Delta l = \frac{Fl}{ES} 
+\end{equation}
+gdzie
+\begin{description}
+\item [ $\Delta l$] zmiana długości pręta [$m$]
+\item [$F$] siła odkształcająca [$N$]
+\item [$l$]  długość pręta [$m$]
+\item [$S$]  pole przekroju pręta $\left[m^2\right]$
+\item [$E$] moduł Younga $\left[\frac{N}{m^2}\right]$
+\end{description}
+ 
+ \subsection{Moduł Younga}
+
+\indent Wychodząc od ogólnego wzoru na prawo Hooke'a: 
+ \begin{equation}
+ \sigma = \varepsilon E 
+ \end{equation}
+ gdzie
+ \begin{description}
+  \item [$\sigma $]  naprężenie $\left[\frac{N}{m^2}\right]$
+  \item [$\varepsilon$]  odkształcenie względne [bezwymiarowe]
+ \end{description}
+ 
+ \begin{equation}
+  \varepsilon = \frac{\delta \Psi}{\delta x}
+ \end{equation}
+
+\indent Otrzymujemy wzór na  prędkość rozchodzenia się fali w pręcie: 
+\begin{equation}
+ v = \sqrt{\frac{E}{\rho}} 
+\end{equation}
+gdzie 
+\begin{description}
+\item [$v$] prędkość rozchodzenia się fali w pręcie $\left[\frac{m}{s}\right]$
+\item [$E$]  moduł Younga $\left[\frac{N}{m^2}\right]$
+\item [$\rho$] gęstość substancji z której został wykonany pręt $\left[\frac{kg}{m^3}\right]$
+\end{description}
+czyli
+\begin{equation}
+\label{wzor:E}
+E = v^2\rho 
+\end{equation}
+
+\subsection{Długość fali}
+
+\indent W pręcie powstaje fala stojąca, odległość między węzłami fali stojące wynosi $ l = \frac{1}{2} \lambda $. Zależność między  $n$- ta długością fali a długością pręta $L$ wyraża wzór:
+\begin{equation}
+\label{wzor:lambda}
+	\lambda_{n} = \frac{2}{n}L
+\end{equation}
+gdzie 
+\begin{description}
+\item [$\lambda_{n}$] długość $n$ -tej fali   [$m$]
+\item [$L$] długość pręta [$m$]
+
+\end{description}
+Mając długość fali i jej częstotliwość dla $n$ -tej składowej harmonicznej można policzyć prędkość fali $v_{n}$
+\begin{equation}
+\label{wzor:v}
+v_{n} = \lambda_{n} \cdot f_{n}
+\end{equation}
+gdzie
+\begin{description}
+\item [$n$] $n$- ta składowa harmoniczna
+\item [$v_{n}$] prędkość fali $\left[\frac{m}{s}\right]$
+\item [$f_{n}$] częstotliwość dla $n$ -tej składowej [$Hz$]
+\end{description}
+
+Pozostawiając do wzoru {\ref{wzor:E}} ostatecznie otrzymujemy:
+$$E = 4\rho f^2 l^2$$
+ \begin{figure}
+ \label{fig:my_label}
+ \includegraphics[scale=0.5]{Hooke.jpg} 
+ \end{figure}
+ 
+ 
+\section{Układ pomiarowy}
+\begin{itemize}
+\item Komputer stacjonarny z oprogramowaniem Zelscope i mikrofonem
+\item Zestaw pięciu prętów, o różnych kształtach (stalowe, aluminiowy, miedziany i mosiężny)
+\item Suwmiarka, miarka w rolce, waga elektroniczna, młotek
+\end{itemize}
+
+\section{Wykonanie ćwiczenia}
+ \begin{enumerate}
+ \item Ustawienie mikrofonu przy pręcie.
+ \item Uderzenie młotkiem w pręt i wciśnięcie stop w programie aby zaobserwować obraz powstały na oscyloskopie.
+ \item Zapisanie częstotliwości dla sześciu składowych harmonicznych w tabeli na podstawie obrazu powstałego w programie.
+ \item Wyliczenie $n$ długości fali na podstawie wzoru {\ref{wzor:lambda}}, nastepnie $n$ prędkości fali na podstawie wzoru  {\ref{wzor:v}}.
+ \item Wyliczenie wartości prędkości średniej 
+ $$ v_{\text{śr}} = \frac{\sum^{n}_{i=1}v_{n}}{n}$$
+ \item Wyliczenie modułu Younga na podstawie wzoru {\ref{wzor:E}}
+ \end{enumerate}
+ 
+ \subsection{Przykładowe obliczenia dla prętu miedzianego}
+ \subsubsection{Długość fali $\lambda$}
+ \begin{equation}
+	\lambda_{n} = \frac{2}{n}L
+\end{equation}
+ $$ \lambda_{1} = \frac{2}{1}\cdot 1.811 = 3.622 [m]$$
+ $$ \lambda_{2} = \frac{2}{2}\cdot 1.811 = 1.811 [m]$$
+ $$ \lambda_{3} = \frac{2}{3}\cdot 1.811 = 1.207 [m]$$
+ $$ \lambda_{4} = \frac{2}{4}\cdot 1.811 = 0.906 [m]$$
+ $$ \lambda_{5} = \frac{2}{5}\cdot 1.811 = 0.724 [m]$$
+ $$ \lambda_{6} = \frac{2}{6}\cdot 1.811 = 0.604 [m]$$
+ 
+ \subsubsection{Prędkość fali $v$}
+ \begin{equation}
+v_{n} = \lambda_{n} \cdot f_{n}
+\end{equation}
+
+$$v_{1} = \lambda_{1} \cdot f_{1} = 3721.24 \left[\frac{m}{s}\right]$$
+
+$$v_{2} = \lambda_{2} \cdot f_{2} = 3721.22 \left[\frac{m}{s}\right]$$
+
+$$v_{3} = \lambda_{3} \cdot f_{3} = 3703.67 \left[\frac{m}{s}\right]$$
+
+$$v_{4} = \lambda_{4} \cdot f_{4} = 3737.76 \left[\frac{m}{s}\right]$$
+
+$$v_{5} = \lambda_{5} \cdot f_{5} = 3731.15 \left[\frac{m}{s}\right]$$
+
+$$v_{6} = \lambda_{6} \cdot f_{6} = 3729.71 \left[\frac{m}{s}\right]$$
+
+\subsubsection{Prędkośc średnia fali $v_{\text{śr}}$}
+$$ v_{\text{śr}} = \frac{\sum^{n}_{i=1}v_{n}}{n}$$
+
+$$ v_{\text{śr}} = \frac{3721.24 + \cdots + 3729.71}{6} = 3724.13 \left[\frac{m}{s}\right] $$
+
+\subsubsection{Gęstość miedzi}
+\begin{equation}
+\rho = \frac{m}{v}
+\end{equation}
+
+$$\rho = \frac{0.066}{0.375 \cdot \pi \cdot 0.0025^2} = 8963.61 \left[\frac{kg}{m^3}\right]$$
+\subsubsection{Moduł Younga $E$}
+\begin{equation}
+E = v_{\text{śr}}^2\rho 
+\end{equation}
+$$E = 8963.61 \cdot 3724.13^2 = 124.313 [GPa]$$
+
+\section{Opracowanie wyników pomiarów}
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll|l|l|}
+\hline
+\multicolumn{4}{|c|}{\textbf{PRĘT 1 (MIEDŹ)}}                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość l {[}$m${]}}}      & 1.811 & \textbf{Masa  próbki m {[}$kg${]}}  & 0.066 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość próbki {[}$m${]}}} & 0.375& \textbf{Promień próbki {[}$m${]}}  & 0.0025 \\ \hline
+\multicolumn{1}{|l|}{} &                                   & 
+\textbf{Gęstość ro $\left[\frac{kg}{m^3}\right]$} & 8963.61                            \\ \hline
+
+\multicolumn{1}{|l|}{\textbf{NR HARMONICZNEJ}}  & \textbf{CZĘSTOTLIWOŚĆ f {[}$Hz${]}} & \textbf{DŁUGOŚĆ FALI $\lambda$ {[}$m${]}}             & \textbf{PRĘDKOŚĆ FALI v $\left[\frac{m}{s}\right]$} \\ \hline
+\multicolumn{1}{|l|}{1} & 1024.40 & 3.622 & 3721.24  \\ \hline
+
+\multicolumn{1}{|l|}{2} & 2054.79 & 1.811  & 3721.22  \\ \hline
+
+\multicolumn{1}{|l|}{3} & 3068.49 & 1.207  & 3703.67  \\ \hline
+
+\multicolumn{1}{|l|}{4} & 4123.29 & 0.907  & 3737.76  \\ \hline
+
+\multicolumn{1}{|l|}{5} & 5150.68 & 0.724  & 3731.15  \\ \hline
+
+\multicolumn{1}{|l|}{6} & 6178.08 & 0.604  & 3729.71  \\ \hline
+
+&   & \textbf{ŚREDNIA PRĘDKOŚĆ v $\left[\frac{m}{s}\right]$}  & 3724.13   \\ \cline{3-4} 
+&   & \textbf{MODUŁ YOUNGA {[}$GPa${]}}                & 124.313    \\ \cline{3-4} 
+\end{tabular}%
+}
+\end{table}
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll|l|l|}
+\hline
+\multicolumn{4}{|c|}{\textbf{PRĘT 2 (STAL) przekój prostokatny}}                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość l {[}$m${]}}}     & 1.802 & \textbf{Masa  próbki m {[}$kg${]}}  & 0.031 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość próbki {[}$m${]}}} & 0.020  & \textbf{Szerokość próbki {[}$m${]}}  & 0.014 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Wysokość próbki {[}$m${]}}} & 0.015 & \textbf{Gęstość ro $\left[\frac{kg}{m^3}\right]$} & 7635.47                            \\ \hline
+
+\multicolumn{1}{|l|}{\textbf{NR HARMONICZNEJ}}  & \textbf{CZĘSTOTLIWOŚĆ f {[}$Hz${]}} & \textbf{DŁUGOŚĆ FALI $\lambda$ {[}$m${]}}             & \textbf{PRĘDKOŚĆ FALI v $\left[\frac{m}{s}\right]$} \\ \hline
+\multicolumn{1}{|l|}{1} & 1397.26 & 2.604 & 3632.88  \\ \hline
+
+\multicolumn{1}{|l|}{2} & 2917.81 & 1.802  & 5257.89  \\ \hline
+
+\multicolumn{1}{|l|}{3} & 4301.37 & 1.201  & 5165.95  \\ \hline
+
+\multicolumn{1}{|l|}{4} & 5698.63 & 0.901  & 5134.47  \\ \hline
+
+\multicolumn{1}{|l|}{5} & 7136.99 & 0.708  & 5144.34  \\ \hline
+
+\multicolumn{1}{|l|}{6} & 8616.44 & 0.601  & 5175.90  \\ \hline
+
+&   & \textbf{ŚREDNIA PRĘDKOŚĆ v $\left[\frac{m}{s}\right]$}  & 5175.71   \\ \cline{3-4} 
+&   & \textbf{MODUŁ YOUNGA {[}$GPa${]}}                & 204,538    \\ \cline{3-4} 
+\end{tabular}%
+}
+\end{table}
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll|l|l|}
+\hline
+\multicolumn{4}{|c|}{\textbf{PRĘT 3 (ALUMINIUM)}}                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość l {[}$m${]}}}      & 0.996 & \textbf{Masa  próbki m {[}$kg${]}}  & 0.024 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość próbki {[}$m${]}}} & 0.440& \textbf{Promień próbki {[}$m${]}}  & 0.0025 \\ \hline
+\multicolumn{1}{|l|}{} &                                   & 
+\textbf{Gęstość ro $\left[\frac{kg}{m^3}\right]$} & 2777.98                            \\ \hline
+
+\multicolumn{1}{|l|}{\textbf{NR HARMONICZNEJ}}  & \textbf{CZĘSTOTLIWOŚĆ f {[}$Hz${]}} & \textbf{DŁUGOŚĆ FALI $\lambda$ {[}$m${]}}             & \textbf{PRĘDKOŚĆ FALI v $\left[\frac{m}{s}\right]$} \\ \hline
+\multicolumn{1}{|l|}{1} & 2424.66 & 1.992 & 4829.92  \\ \hline
+
+\multicolumn{1}{|l|}{2} & 4972.60 & 0.996  & 4952.71  \\ \hline
+
+\multicolumn{1}{|l|}{3} & 7383.56 & 0.664  & 4902.68  \\ \hline
+
+\multicolumn{1}{|l|}{4} & 9794.52 & 0.498  & 4877.67  \\ \hline
+
+\multicolumn{1}{|l|}{5} & 12294.5 & 0.398  & 4898.14  \\ \hline
+
+\multicolumn{1}{|l|}{6} & 14828.8 & 0.332  & 4923.15  \\ \hline
+
+&   & \textbf{ŚREDNIA PRĘDKOŚĆ v $\left[\frac{m}{s}\right]$}  & 4897.38   \\ \cline{3-4} 
+&   & \textbf{MODUŁ YOUNGA {[}$GPa${]}}                &  66.6279    \\ \cline{3-4} 
+\end{tabular}%
+}
+\end{table}
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll|l|l|}
+\hline
+\multicolumn{4}{|c|}{\textbf{PRĘT 4 (MOSIĄDZ)}}                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość l {[}$m${]}}}     & 0.995 & \textbf{Masa  próbki m {[}$kg${]}}  & 0.173 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość próbki {[}$m${]}}} & 0.221  & \textbf{Szerokość próbki {[}$m${]}}  & 0.0095 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Wysokość próbki {[}$m${]}}} & 0.010 & \textbf{Gęstość ro $\left[\frac{kg}{m^3}\right]$} & 8240.06                            \\ \hline
+
+\multicolumn{1}{|l|}{\textbf{NR HARMONICZNEJ}}  & \textbf{CZĘSTOTLIWOŚĆ f {[}$Hz${]}} & \textbf{DŁUGOŚĆ FALI $\lambda$ {[}$m${]}}             & \textbf{PRĘDKOŚĆ FALI v $\left[\frac{m}{s}\right]$} \\ \hline
+\multicolumn{1}{|l|}{1} & 1684.93 & 1.99 & 3353.01  \\ \hline
+
+\multicolumn{1}{|l|}{2} & 3479.45 & 0.995  & 3462.05  \\ \hline
+
+\multicolumn{1}{|l|}{3} & 5123.29 & 0.663  & 3398.28  \\ \hline
+
+\multicolumn{1}{|l|}{4} & 6917.81 & 0.498 & 3441.61 \\ \hline
+
+\multicolumn{1}{|l|}{5} & 8630.14 & 0.398  & 3434.80  \\ \hline
+
+\multicolumn{1}{|l|}{6} & 10342.5 & 0.332  & 3430.60  \\ \hline
+
+&   & \textbf{ŚREDNIA PRĘDKOŚĆ v $\left[\frac{m}{s}\right]$}  & 3420.06   \\ \cline{3-4} 
+&   & \textbf{MODUŁ YOUNGA {[}$GPa${]}}                & 96.3841    \\ \cline{3-4} 
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll|l|l|}
+\hline
+\multicolumn{4}{|c|}{\textbf{PRĘT 5 (STAL) przekrój okrągły}}                                                                                                                                    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość l {[}$m${]}}}     & 1.8 & \textbf{Masa  próbki m {[}$kg${]}}  & 0.066 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Długość próbki {[}$m${]}}} & 0.020  & \textbf{Szerokość próbki {[}$m${]}}  & 0.0014 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Wysokość próbki {[}$m${]}}} & 0.015 & \textbf{Gęstość ro $\left[\frac{kg}{m^3}\right]$} & 7635.47                            \\ \hline
+
+\multicolumn{1}{|l|}{\textbf{NR HARMONICZNEJ}}  & \textbf{CZĘSTOTLIWOŚĆ f {[}$Hz${]}} & \textbf{DŁUGOŚĆ FALI $\lambda$ {[}$m${]}}             & \textbf{PRĘDKOŚĆ FALI v $\left[\frac{m}{s}\right]$} \\ \hline
+\multicolumn{1}{|l|}{1} & 1383.56 & 3.60 & 4980.82  \\ \hline
+
+\multicolumn{1}{|l|}{2} & 2917.81 & 1.80  & 5252.06  \\ \hline
+
+\multicolumn{1}{|l|}{3} & 4273.97 & 1.20  & 5128.76  \\ \hline
+
+\multicolumn{1}{|l|}{4} & 5739.73 & 0.90  & 5165.76  \\ \hline
+
+\multicolumn{1}{|l|}{5} & 7219.18 & 0.72  & 5197.81  \\ \hline
+
+\multicolumn{1}{|l|}{6} & 8602.74 & 0.60  & 5161.64  \\ \hline
+
+&   & \textbf{ŚREDNIA PRĘDKOŚĆ v $\left[\frac{m}{s}\right]$}  & 4897.34   \\ \cline{3-4} 
+&   & \textbf{MODUŁ YOUNGA {[}$GPa${]}}                & 202,339    \\ \cline{3-4} 
+\end{tabular}%
+}
+\end{table}
+\newpage
+\section{Opracowanie wyników}
+	Dla obliczeń błędów pomiaru przyjęto następujące niepewności:\\
+	Dla długości pręta: $u(l)= 1 [mm]$ z powodu niepewności miarki w rolce równej 1 $mm$ \\
+	Dla promienia: $u(r)=u(R)= 0,1[mm]$ ponieważ niepewność suwmiarki to 0,01 $mm$\\
+	Dla masy próbki:$u(m)= 1 [g]$ niepewność pomiaru wagi przyjmujemy na 1 $g$\\
+	Dla częstotliwości:$u(f)= 25 [Hz]$ z powodów tj. niedokładne odczytanie częstotliwości z obrazu oscyloskopu, zakłócenia spowodowane ograniczeniami sprzętu \\
+	
+\subsection{Niepewność gęstości}
+\subsubsection{Niepewność gęstości próbki o kształcie walca}  
+	$$ u(\rho)_{w}=\sqrt{\bigg(\frac{\partial \rho}{\partial m}u(m)\bigg)^2+\bigg(\frac{\partial \rho}{\partial l}u(l)\bigg)^2+\bigg(\frac{\partial \rho}{\partial r}u(r)\bigg)^2+} = $$ 
+   $$ = \sqrt{\bigg(\frac{1}{\Pi r^2 l)}u(m)\bigg)^2+\bigg(\frac{-m}{l^2 \Pi(r^2)}u(l)\bigg)^2+\bigg(\frac{-2m}{\Pi r^3 l}u(r)\bigg)^2}$$
+	gdzie 
+    \begin{description}
+    \item [$\rho$] gęstość materiału z jakiego został wykonany pręt $\left[\frac{kg}{m^3}\right]$
+    
+    \item [$r(\rho)$] niepewność gęstości materiału z jakiego został wykonany pręt $\left[\frac{kg}{m^3}\right]$
+  
+    \item [$u(m)$] niepewność pomiaru masy próbki pręta [$kg$]
+  
+     \item [$u(l)$] niepewność pomiaru długości próbki pręta
+ 
+     \item [$u(r)$] niepewność promienia próbki
+
+     \item [$u(R)$] niepewność pomiaru wysokości próbki próbki
+    \end{description}
+    
+	\subsection{Niepewność długości fali}
+	$$ u(\lambda)=\sqrt{\bigg(\frac{2}{n}u(l)\bigg)^2}$$
+	gdzie
+    \begin{description}
+    \item [$u(\lambda)$] niepewność pomiaru długości fali [$m$]
+    \item [$n$] liczba harmonicznych
+    \item [$u(l)$] niepewność długości pręta [$m$]
+    \end{description}
+    
+	\subsection{Niepewność prędkości fali}
+	$$ u(v)=\sqrt{\bigg(\frac{\partial v}{\partial f}u(f)\bigg)^2+\bigg(\frac{\partial v}{\partial \lambda}u(\lambda)\bigg)^2}=\sqrt{\bigg(\lambda u(f)\bigg)^2+\bigg(f u(\lambda)\bigg)^2}$$
+	gdzie 
+    \begin{description}
+    \item [$u(v)$] niepewność pomiaru prędkości fali $\left[\frac{m}{s}\right]$
+    \item [$u(f)$] niepewność pomiaru częstotliwości fali [$Hz$]
+    \item [$f$] częstotliwość fali [$Hz$]
+     \item [$u(\lambda)$] niepewność pomiaru długości fali [$m$]
+     \item [$\lambda$] długość fali [$m$]
+    \end{description}
+    
+	\subsection{Niepewność modułu Younga}
+	$$ u(E)=\sqrt{\bigg(\frac{\partial E}{\partial \rho}u(\rho)\bigg)^2+\bigg(\frac{\partial E}{\partial v}u(v)\bigg)^2} =
+	\sqrt{\bigg(v^2 u(\rho)\bigg)^2+\bigg(2 \rho v u(v)\bigg)^2}$$
+	gdzie
+    \begin{description}
+    \item [$u(E)$] Niepewność wyznaczonego modułu Younga [$GPa$]
+    
+    \item [$v$] $\left[\frac{m}{s}\right]$
+    
+    \item [$u(\rho)$] $\left[\frac{kg}{m^3}\right]$
+    
+    \item [$\rho$] $\left[\frac{kg}{m^3}\right]$
+    \item [$u(v)$] $\left[\frac{m}{s}\right]$
+    \end{description}
+    
+\begin{table}[!htbp]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Nr pręta (materiał)}} & \multicolumn{1}{c|}{\textbf{Niepewność gęstości u($\rho$) $\left[\frac{kg}{m^3}\right]$}} & \multicolumn{1}{c|}{\textbf{Niepewność prędkości fali u(v) $\left[\frac{m}{s}\right]$}} & \multicolumn{1}{c|}{\textbf{Niepewność moduług Younga u(E) {[}$GPa${]}}} \\ \hline
+1 (aluminium)                                      & 35.4413                                                                            & 90.0115                                                                & 5.9761                                                                 \\ \hline
+2 (stal)                                           & 571.8466                                                                           & 90.0159                                                                & 16.6563                                                                \\ \hline
+3 (mosiądz)                                        & 80.7742                                                                            & 50.0353                                                                & 3.1301                                                                 \\ \hline
+4 (stal)                                           & 286.3508                                                                           & 90.0157                                                                & 10.2482                                                                \\ \hline
+5 (stal)                                           & 78.9227                                                                            & 90.0159                                                                & 7.1581                                                                 \\ \hline
+\end{tabular}%
+}
+\end{table}
+\section{Wnioski}
+\begin{itemize}
+\item 
+\item 
+\item  
+\end{itemize}
+\end{document}
